@@ -64,4 +64,3 @@ themeChange.addEventListener("click", () => {
 });
 
 // Loder
-$("#loader").addClass("hide-loader");
