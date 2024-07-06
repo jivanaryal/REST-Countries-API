@@ -54,13 +54,21 @@ searchInput.addEventListener("input", (e) => {
 });
 
 // dark mode
-themeChange.addEventListener("click", () => {
+themeChange.addEventListener("click", (e) => {
   body.classList.toggle("dark");
+  // checkTheme()
+
   if (document.body.classList.contains("dark")) {
+    checkTheme("dark");
     themeChange.innerHTML = '<i class="fa-solid fa-sun"></i>';
   } else {
+    checkTheme("white");
     themeChange.innerHTML = '<i class="fa-solid fa-moon"></i>';
   }
 });
 
+function checkTheme(color) {
+  console.log(color);
+  localStorage.setItem("theme", color);
+}
 // Loder
